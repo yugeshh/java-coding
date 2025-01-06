@@ -1,0 +1,13 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        for (int i = 1000; i <= 1004; i++) {
+            for (int j = 56; j <= 60; j++) {
+                a = a + 1;
+            }
+            a = a + 3;
+        }
+        System.out.println(a);
+    }
+}
