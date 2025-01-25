@@ -1,0 +1,26 @@
+//we have to do for loop travesing 
+//have a counting variable, count should be initialised with 1 
+// stop counting when theres a diffrence in character
+//at the same time we have to append the result in the 
+#after iteration print the result 
+
+public class Main
+{
+	public static void main(String[] args) {
+		String a="aaabbddddcccaa";
+		String b="";
+		int cnt=1;
+		for(int i=0;i<a.length();i++){
+		    if((i+1)<a.length()&&a.charAt(i)==a.charAt(i+1)){
+		        cnt=cnt+1;
+		    }
+		    else{
+		        b=b+a.charAt(i);
+		        b=b+cnt;
+		        cnt=1;
+		    }
+		    
+		}
+		System.out.println(b);
+	}
+}
