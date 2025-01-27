@@ -1,0 +1,24 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Boy name: ");
+		String boy = sc.nextLine();
+		char n1[]= boy.toCharArray();
+		System.out.println("Enter girl name: ");
+		String girl = sc.nextLine();
+		char n2[]= girl.toCharArray();
+		
+		System.out.println("Boy name : " + Arrays.toString(n1));
+        System.out.println("Girl name : " + Arrays.toString(n2));
+	}
+}
+
