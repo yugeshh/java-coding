@@ -1,0 +1,35 @@
+class BankAccount
+{
+    private int AccountNum;
+    private double Balance;
+   
+    BankAccount(int AccountNum,double Balance){
+        this.AccountNum= AccountNum;
+        this.Balance= Balance;
+    }
+   
+    void deposit(int amount){
+        Balance+=amount;
+        System.out.println("The Balance = "+Balance);
+    }
+   
+    void withdraw(int amount){
+        if(amount>Balance){
+            System.out.println("Insufficient Balance");
+        }
+        else{
+        Balance-=amount;
+        System.out.println("The Balance left after Withdraw :"+Balance);
+        }
+    }
+}
+
+public class Main
+{
+public static void main(String[] args) {
+BankAccount bank= new BankAccount(1234,5000);
+bank.deposit(1000);
+bank.withdraw(3000);
+bank.withdraw(10000);
+}
+}
