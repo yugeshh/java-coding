@@ -1,0 +1,19 @@
+class Calculator{
+    int num1;
+    int num2;
+   
+    Calculator(int a, int b){
+    num1 = a;
+    num2 = b;
+    }
+    void Addition(){
+    System.out.println("Addition = " + (num1 + num2));
+    }
+}
+public class Main{
+public static void main(String[] args){
+Calculator a = new Calculator(10,5);
+a.Addition();
+}
+
+}
