@@ -1,0 +1,39 @@
+import java.util.Scanner; 
+public class Main
+{
+    
+    static int binary(int left, int right, int n, int[] nums)
+    {
+        if(left>right)
+        {
+            return 200;
+        }
+        int mid=(left+right)/2;
+        
+        if(nums[mid]==n)
+        {
+            return mid;
+        }
+        else if (n>nums[mid]) 
+            return binary(mid + 1,right, n, nums);
+        else {
+            return binary(left,mid - 1, n, nums);
+        }
+    }
+    
+	public static void main(String[] args)
+	{
+	    Scanner sc=new Scanner(System.in);
+	    int[] nums={1,2,3,12,22,24,44,55,57,67};
+	    System.out.print("enter num :");
+	    int n=sc.nextInt();
+	    int res=binary(0,8,n,nums);//left,right,no of ele,array
+	    if(res!=200)
+	    System.out.println("element at "+res);
+	    else
+	    System.out.println("element not found");
+	    sc.close();
+	    
+	}
+}
+
