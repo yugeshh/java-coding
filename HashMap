@@ -1,0 +1,14 @@
+import java.util.HashMap; 
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		HashMap<String,Integer>names=new HashMap<>();
+		names.put("AASHIK",21);
+		names.put("abhi",28);
+		names.put("rudhan",26);
+		names.put("Karthi",24);
+		names.put("Anu",27);
+		System.out.println(names);
+	}
+}
