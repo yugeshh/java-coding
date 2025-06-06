@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+class Main
+{
+    static final int max= 10;
+	static int[] stack = new int[max];
+	static int top = -1;
+	static void push(int val){
+	    if(top>=max){
+	        System.out.println("StackOverflow");
+	        return;
+	    }
+	    stack[++top]=val;
+	    System.out.println(val+"is pushed into stack");
+        
+	}
+    static void pop(){
+        if(top==-1){
+	        System.out.println("Stack is empty");
+	        return;
+        }
+        System.out.println(stack[top--]+" is popped");
+        
+    }
+    static void peak(){
+        if(top==-1){
+	        System.out.println("Stack is empty");
+	        return;
+        }
+	    System.out.println("top element is : " +stack[top]);
+	    
+    }
+	public static void main(String[] args) {
+	    
+		//System.out.println(max);
+		push(21);
+		push(8);
+		push(9);
+		pop();
+		peak();
+	}
+}
