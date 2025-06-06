@@ -1,0 +1,90 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc =new Scanner(System.in);
+	    ArrayList<Integer> array = new ArrayList<>();
+	    while (true){
+	        
+	    
+	        System.out.println("-------List Menu--------");
+	    System.out.println("1. Adding the data ");
+	    System.out.println("2. Get data from specific index ");
+	    System.out.println("3. Remove data from specific index ");
+	    System.out.println("4. Remove the specific data");
+	    System.out.println("5. Find the list size   ");
+	    System.out.println("6. search");
+	    System.out.println("7. Inserting at a specific index  ");
+	    System.out.println("8.List check for empty  ");
+	    System.out.println("9. find index of data   ");
+	    System.out.println("10. clear list");
+	    System.out.println("11. Display ");
+	    System.out.println("12. Exit");
+	    System.out.println(" --------------------------- ");
+	    System.out.print("enter your choice: ");
+	    int choice = sc.nextInt();
+	    switch (choice){
+	        case 1:
+	            System.out.print("enter value: ");
+	            int val=sc.nextInt();
+	            array.add(val);
+	            System.out.println("entered value: "+val);
+	            break;
+	        case 2:
+	            System.out.print("enter index to fetch data : ");
+	            int getdataind=sc.nextInt();
+	            array.get(getdataind);
+	            break;
+	        case 3:
+	            System.out.println("enter index");
+	            int ind = sc.nextInt();
+	            System.out.println(array.get(ind)+"is removed from list from index"+ind);
+	            array.remove(ind);
+	            break;
+	        case 4:
+	            System.out.println("enter data to be removed: ");
+	            int dataremove=sc.nextInt();
+	            array.remove(Integer.valueOf(dataremove));
+	            System.out.println(dataremove+"is removed from the list");
+	            break;
+	        case 5:
+	            System.out.println("number of elements in list is :"+array.size());
+	            break;
+	        case 6:
+	            System.out.println("enter element to search");
+	            int ele = sc.nextInt();
+	            System.out.println(ele+"element found ? "+ array.contains(ele));
+	            break;
+	        case 7:
+	            System.out.print("enter index: ");
+	            int index=sc.nextInt();
+	            System.out.print("enter value: ");
+	            int val1=sc.nextInt();
+	            array.set(index,val1);
+	            System.out.println(val1+ "is added at index"+index);
+	            break;
+	            
+	        case 8:
+	            System.out.println("empty ? "+array.isEmpty());
+	            break;
+	        case 9:
+	            System.out.println("enter value of data  : ");
+	            int findindex=sc.nextInt();
+	            array.indexOf(Integer.valueOf(findindex));
+	            System.out.println(findindex+"is index from the list");
+	            break;
+	        case 10:array.clear();
+	                System.out.println("the list is cleared");
+	                break;
+	        case 11:
+	            System.out.println("list elements are: ");
+	            System.out.println(array);
+	            break;
+	        case 12: System.out.println("Exit"); System.exit(0);
+	        default: System.out.println("enter right choice");     
+	        
+	    }
+	    }
+	}
+}
