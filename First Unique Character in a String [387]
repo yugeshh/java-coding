@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static char repeatedCharacter(String s) {
+        int[] freq = new int[26];
+
+        for (char ch : s.toCharArray()) {
+            freq[ch - 'a']++;
+            if (freq[ch - 'a'] == 2) {
+                return ch;  // Return when the character appears second time
+            }
+        }
+
+        return '-'; // Return default value if no character repeats
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        char result = repeatedCharacter(input);
+        
+        if (result == '-') {
+            System.out.println("No character appears twice.");
+        } else {
+            System.out.println("First character that appears twice: " + result);
+        }
+    }
+}
